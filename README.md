@@ -28,4 +28,7 @@ Tests:
 -	should display description correctly for screen size filter on Which TV Review page
 -	should display description correctly for screen type filters
 
+Link to test run video:
+https://www.loom.com/share/3d663a121d56409f80243848b9c5e27e
+
 
