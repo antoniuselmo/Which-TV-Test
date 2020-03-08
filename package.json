@@ -1,0 +1,27 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "selenium-start": "node_modules/.bin/selenium-standalone start",
+    "automate": "./node_modules/.bin/wdio wdio.conf.js",
+    "auto-test": "npm run selenium-start & npm run automate"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-webdriverio": "^0.4.3",
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-mochawesome-reporter": "^3.2.0",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "webdriverio": "^4.14.0"
+  },
+  "dependencies": {
+    "chromedriver": "^2.43.1",
+    "node": "^13.10.1",
+    "wdio": "^4.0.0"
+  }
+}
