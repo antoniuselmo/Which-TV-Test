@@ -4,8 +4,8 @@ var HomePage = require('../pages/home.page');
 
 module.exports = {
   /*
-   * method checkLinks ( )
-   * checks all links on YLD page
+   * method openScreenTypeFilterPanel ( )
+   * open Screen Type filter panel and waits for animation
    *
    **/
     openScreenTypeFilterPanel : function () {
@@ -15,8 +15,8 @@ module.exports = {
       browser.pause(1000)
     },
     /*
-     * method checkLinks ( )
-     * checks all links on YLD page
+     * method closeScreenTypeFilterPanel ( )
+     * closes Screen Type filter panel and waits for animation
      *
      **/
       closeScreenTypeFilterPanel : function () {
@@ -25,7 +25,7 @@ module.exports = {
         HomePage.which_tv_screentype_summary_done_button.waitForEnabled()
         HomePage.which_tv_screentype_summary_done_button.click()
         HomePage.which_tv_clear_filter_button.waitForEnabled()
-        browser.pause(2000)
+        browser.pause(1000)
       }
 
 }
