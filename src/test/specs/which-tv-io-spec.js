@@ -33,6 +33,18 @@ describe('Which Television Reviews Page Tests', function() {
     });
 
 
+    it ('should display the Which TV Reviews page correctly', function() {
+          //assert presence of which which_logo
+          //assert presence of which global nav
+          // assert presence of filters
+          // assert presence of banner
+          // assert  presence of sorting
+    });
+
+    it ('should show description correctly for screen size on Which TV Review page', function() {
+        //select each filter and assert page description corresponds
+    });
+
      // test for individual screentype filters
     screen_type_filters.forEach(function (screen_type_filter) {
       let testName = screen_type_filter.filterText
@@ -43,28 +55,24 @@ describe('Which Television Reviews Page Tests', function() {
       expectedDes += `${screen_type_filter.titleText} television reviews`
       it (testName, function () {
         utils.openScreenTypeFilterPanel()
-        // HomePage.which_filter_options.waitForVisible()
-        // HomePage.which_tv_screentype_main_button.waitForVisible()
-        // HomePage.which_tv_screentype_main_button.click()
-        //browser.pause(1000)
         browser.element(screentypeSel).click()
         browser.element(screentypeSel).waitForVisible()
+        //wait added for Loading animation
         browser.pause(1000)
         utils.closeScreenTypeFilterPanel()
-        // HomePage.which_tv_clear_filter_button.waitForVisible()
-        // HomePage.which_tv_clear_filter_button.waitForEnabled()
-        // HomePage.which_tv_screentype_summary_done_button.waitForEnabled()
-        // HomePage.which_tv_screentype_summary_done_button.click()
-        // HomePage.which_tv_clear_filter_button.waitForEnabled()
-        // browser.pause(2000)
         HomePage.which_tv_main_description.waitForVisible()
         expect(HomePage.which_tv_main_description.getText()).to.equal(expectedDes)
       })
    })
 
    afterEach(function() {
+      if (HomePage.which_tv_clear_filter_button.isVisible()) {
 	 	   HomePage.which_tv_clear_filter_button.click()
        browser.pause(2000)
        HomePage.which_logo.waitForVisible()
+      }
 	});
+
+
+
 });
