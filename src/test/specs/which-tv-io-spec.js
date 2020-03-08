@@ -71,7 +71,7 @@ describe('Which Television Reviews Page Tests', function() {
        browser.pause(2000)
        HomePage.which_logo.waitForVisible()
       }
-	});
+	  });
 
 
 
